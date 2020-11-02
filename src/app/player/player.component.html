@@ -1,0 +1,8 @@
+<div class="col-md-8">
+    <h2>{{songTitle}}</h2>
+    <youtube-player [videoId]="id" (ready)="savePlayer($event)" (change)="onStateChange($event)"  height="600" width="800">
+    </youtube-player>
+</div>
+<div>
+    <app-quotes></app-quotes>
+</div>

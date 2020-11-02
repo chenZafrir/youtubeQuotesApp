@@ -1,0 +1,11 @@
+<div class="col-md-4">
+    <input type="text" class="form-control" [(ngModel)]="searchQuery" placeholder="Search song">
+    <ng-container *ngFor="let song of songs | filter : searchQuery" #filterResults> 
+        <h3 *ngIf="song !== -1" class="top60 clickable" (click)="songClick(song)">
+            {{song.title}}
+        </h3>
+        <h3 *ngIf="song === -1" class="top60 clickable" (click)="songClick(song)" style="color: red;">
+            No Results for query : {{searchQuery}}
+        </h3>
+    </ng-container>
+</div>

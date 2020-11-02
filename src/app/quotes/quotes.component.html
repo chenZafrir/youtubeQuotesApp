@@ -1,0 +1,5 @@
+<p *ngFor="let quote of songQuotes; let i = index" (click)="skipToOffset(quote.offset)" style="width:100%">
+    Quote #{{i}}
+    <img src="../../assets/play.png" class="clickable playIcon">
+    {{quote.text}} - {{quote.offset}}
+</p>
